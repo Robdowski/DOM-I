@@ -56,4 +56,55 @@ for (let i = 0; i<6; i++){
 let ctatext = document.getElementsByClassName("cta-text")
 console.log(ctatext[0].children)
 
+/// HEADER
 ctatext[0].children[0].innerHTML = "DOM <br> Is <br> Awesome"
+ctatext[0].children[1].textContent = "Get Started"
+let headimg = document.getElementById("cta-img")
+headimg.setAttribute("src", siteContent["cta"]["img-src"])
+
+
+///// TOP CONTENT /////
+let topcontent = document.getElementsByClassName("top-content")
+
+// features
+topcontent[0].children[0].children[0].innerHTML = "Features"
+topcontent[0].children[0].children[1].innerHTML = siteContent["main-content"]["features-content"]
+
+//about
+topcontent[0].children[1].children[0].textContent = siteContent["main-content"]["about-h4"]
+topcontent[0].children[1].children[1].textContent = siteContent["main-content"]["about-content"]
+
+///// MIDDLE IMG //////
+let midimg = document.getElementById("middle-img")
+midimg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+////// BOTTOM OF IMAGE/////
+let botcontent = document.getElementsByClassName("bottom-content")
+
+//services
+botcontent[0].children[0].children[0].innerHTML = siteContent["main-content"]["services-h4"]
+botcontent[0].children[0].children[1].innerHTML = siteContent["main-content"]["services-content"]
+
+//product
+botcontent[0].children[1].children[0].innerHTML = siteContent["main-content"]["product-h4"]
+botcontent[0].children[1].children[1].innerHTML = siteContent["main-content"]["product-content"]
+
+// vision
+botcontent[0].children[2].children[0].innerHTML = siteContent["main-content"]["vision-h4"]
+botcontent[0].children[2].children[1].innerHTML = siteContent["main-content"]["vision-content"]
+
+let contact = document.getElementsByClassName("contact")[0]
+
+contact.children[0].innerHTML = siteContent["contact"]["contact-h4"]
+contact.children[1].innerHTML = siteContent["contact"]["address"]
+contact.children[2].innerHTML = siteContent["contact"]["phone"]
+contact.children[3].innerHTML = siteContent["contact"]["email"]
+
+let footer = document.getElementsByTagName("footer")[0]
+
+footer.children[0].innerHTML = siteContent["footer"]["copyright"]
+
+
+
+
+
