@@ -53,4 +53,7 @@ for (let i = 0; i<6; i++){
   navanchors[i].innerHTML = siteContent.nav[`nav-item-${i+1}`]
 }
 
+let ctatext = document.getElementsByClassName("cta-text")
+console.log(ctatext[0].children)
 
+ctatext[0].children[0].innerHTML = "DOM <br> Is <br> Awesome"
