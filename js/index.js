@@ -105,6 +105,39 @@ let footer = document.getElementsByTagName("footer")[0]
 footer.children[0].innerHTML = siteContent["footer"]["copyright"]
 
 
+// NAV
+let navbar = document.getElementsByTagName("nav")[0]
+//APPEND
+let a = document.createElement("a")
+let atext = document.createTextNode("Team")
+a.appendChild(atext)
+navbar.appendChild(a)
+//PREPEND
+let a2 = document.createElement("a")
+let a2text = document.createTextNode("Company")
+a2.appendChild(a2text)
+navbar.prepend(a2)
+
+navbar.children[7].setAttribute("href" , "#")
+navbar.children[0].setAttribute("href", "#")
+
+// COLOR TO GREEN
+let anchors = document.getElementsByTagName("a")
+for (let i=0;i<anchors.length; i++){
+  anchors[i].style.color = "green";
+}
 
 
+///// STRETCH GOAL /////
+function clicky(){
+  let img = document.getElementById("cta-img")
+  if (img.style.display != "none"){
+    img.style.display = "none";
+  }
+  else{
+    img.style.display = "block";
+  }
+}
 
+let button = document.querySelector("button")
+button.setAttribute("onClick", "clicky()")
